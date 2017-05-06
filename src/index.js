@@ -1,4 +1,11 @@
+import express from 'express';
 
-export default function () {
-    return 'Hello world';
-}
+let app = express();
+
+app.get('/', function (req, res) {
+    res.send('Hello world');
+})
+
+app.listen(3000, function () {
+    console.log('Listening on 3000');
+})
